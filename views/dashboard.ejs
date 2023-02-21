@@ -1,0 +1,15 @@
+<%- include("./partials/head.ejs", varTitle = "Dashboard") %>
+<body>
+    <h2 class=""> Dashboard </h2>
+    <% if(varUserExists){ %>
+        <a href="/auth/logout">Logout</a>    
+    <% } %>
+
+    <% if(!varUserExists){ %>    
+        <a href="/auth/login">Login</a>
+    <% } %>
+        
+    || <a href="/profile/view">Protected route - Profile</a>
+
+</body>
+</html>
